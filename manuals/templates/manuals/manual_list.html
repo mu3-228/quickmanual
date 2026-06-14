@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QuickManual</title>
+</head>
+<body>
+
+<h1>マニュアル一覧</h1>
+
+<ul>
+    {% for manual in manuals %}
+        <li>
+            {{ manual.title }} - {{ manual.category }}
+        </li>
+    {% empty %}
+        <li>まだマニュアルがありません</li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>

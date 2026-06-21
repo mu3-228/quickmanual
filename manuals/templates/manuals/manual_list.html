@@ -19,7 +19,11 @@
             {{ manual.title }} - {{ manual.category }}
         </li>
     {% empty %}
+    {% if request.GET.q %}
+        <li>該当するマニュアルがありません</li>
+    {% else %}
         <li>まだマニュアルがありません</li>
+    {% endif %}
     {% endfor %}
 </ul>
 
